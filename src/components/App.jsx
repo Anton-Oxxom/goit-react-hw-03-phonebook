@@ -39,8 +39,8 @@ export class App extends Component {
         contact => contact.name.toLowerCase() === name.toLowerCase()
       )
     )
-      return Notiflix.Notify.failure(`${name} is already in phonebook`);
-
+     { return  Notiflix.Notify.failure(`${name} is already in phonebook`) };
+    
     this.setState(prevState => {
       return { contacts: [...prevState.contacts, { id, name, number }] };
     });
